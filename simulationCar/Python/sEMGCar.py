@@ -6,7 +6,8 @@ Created on Mon Jul 20 11:53:39 2015
 """
 
 # INTIALISATION
-import pygame, math, sys
+import pygame
+import math
 import serial
 import serial.tools.list_ports
 from pygame.locals import *
