@@ -1,1 +1,51 @@
-Instructions
+The simulation software was written in Python programming language and it uses serial communication to receive the data from the Arduino board.
+In order to use the simulation software users must connect the SpikerBox to the Arduino board (see connection diagram in figure 3), in this case the Bluetooth module is not necessary and its connections can be skipped.
+After connect the SpikerBox to the Arduino board, upload the sketch in the Arduino folder to the Arduino board.
+Finally, after upload the code, keep connected the Arduino board to the computer and install/run the simulation software.
+
+Install the simulation software on Windows.
+
+Method 1 – Using the standalone application
+
+We have compiled the simulation software in a standalone application for Windows operating system. In order to use this application the user only need to double click the “sEMGCar.exe” file.
+If the file throws an error, install the Microsoft Visual C++ 2008 Redistributable Package (http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=29) and try again.
+
+Method 2 – Using the source code
+
+We provide the source code and the users can run the software through the source code. In order to run the software using the source code, Python and the pyserial and pygame libraries must be installed.
+
+1.	Download and install the latest Python 2 release from https://www.python.org/downloads/windows/.
+2.	Download and install the latest pyserial for Python 2 from https://pypi.python.org/pypi/pyserial.
+3.	Download and install the latest pygame for Python 2 from http://www.pygame.org/download.shtml.
+4.	After install all the libraries, just double click to the “sEMGCar.py” file.
+
+Install the simulation software on Mac OS.
+
+Method 1 – Using the standalone application
+
+We have compiled the simulation software in a standalone application for Mac operating system. In order to use this application the user only need to double click the “sEMGCar” file.
+
+Method 2 – Using the source code
+
+In Mac OS Python is already installed, Mac users need to install XQuartz, pyserial and pygame to run the software.
+
+1.	Install XQuartz from https://xquartz.macosforge.org/trac/wiki/X112.7.7.
+2.	Open the Terminal and use the following command to install pyserial: sudo easy_install –U pyserial
+3.	Download and install pygame from http://www.pygame.org/ftp/pygame-1.9.2pre-py2.7-macosx10.7.mpkg.zip.
+4.	Open the Terminal and using the “cd” command go to the source code folder, then use the command “python sEMGCar.py” to run the software.
+
+Install the simulation software on Linux.
+
+Linux users can run the software through the source code. In Linux Python is already installed, Linux users need to install pyserial and pygame to run the software.
+
+1.	Open the terminal and using the default package manager of your Linux distribution install pyserial.
+Examples:
+Debian, Ubuntu and other Debian-based distributions: sudo apt-get install python-serial
+Arch Linux, AntergOS and other Arch-based distributions: sudo pacman –S python2-pyserial
+
+2.	Open the terminal and using the default package manager of your Linux distribution install pygame.
+Examples
+Debian, Ubuntu and other Debian-based distributions: sudo apt-get install python-pygame
+Arch Linux, AntergOS and other Arch-based distributions: sudo pacman –S python2-pygame
+
+3.	Open the Terminal and using the “cd” command go to the source code folder, then use the command “python2 sEMGCar.py” to run the software.
