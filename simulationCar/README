@@ -7,7 +7,9 @@ Install the simulation software on Windows.
 
 Method 1 – Using the standalone application
 
-We have compiled the simulation software in a standalone application for Windows operating system. In order to use this application the user only need to double click the “sEMGCar.exe” file.
+We have compiled the simulation software in a standalone application for Windows operating system.
+Download it from https://www.dropbox.com/s/ran726fyn0p853o/sEMGCar_Windows.zip?dl=0
+In order to use this application the user only need to double click the “sEMGCar.exe” file.
 If the file throws an error, install the Microsoft Visual C++ 2008 Redistributable Package (http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=29) and try again.
 
 Method 2 – Using the source code
@@ -23,7 +25,9 @@ Install the simulation software on Mac OS.
 
 Method 1 – Using the standalone application
 
-We have compiled the simulation software in a standalone application for Mac operating system. In order to use this application the user only need to double click the “sEMGCar” file.
+We have compiled the simulation software in a standalone application for Mac operating system.
+Download it from https://www.dropbox.com/s/azosobq5xm7vmux/sEMGCar_Mac.zip?dl=0
+In order to use this application the user only need to double click the “sEMGCar” file.
 
 Method 2 – Using the source code
 
