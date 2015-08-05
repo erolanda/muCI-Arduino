@@ -35,15 +35,19 @@ MAX_X = 1024
 ser = serial_ports()
 
 # initialize the screen with size (MAX_X, MAX_Y)
+pygame.init() # initialize all imported pygame modules
 screen = pygame.display.set_mode((MAX_X, MAX_Y))
 pygame.display.set_caption("sEMG Car")
 car = pygame.image.load('car2.png')
 clock = pygame.time.Clock() # load clock
 speed = direction = 0 # start speed & direction
 position = (500, 500) # start position
- 
+
+myfont = pygame.font.Font(pygame.font.get_default_font(), 25)
+label = myfont.render("Some text!", 1, (255,255,255))
+
 play = True
-while play:
+while play:    
     k_up = k_left = k_right = 0 # init key values
     clock.tick(30)
     cmd = ser.read()
@@ -72,12 +76,20 @@ while play:
     # make sure the car doesn't exit the screen
     if y < 0:
         y = 0
+	screen.blit(label, (500, 500))
+    	pygame.display.update()
     elif y > MAX_Y:
         y = MAX_Y
+	screen.blit(label, (500, 500))
+    	pygame.display.update()
     if x < 0:
         x = 0
+	screen.blit(label, (500, 500))
+    	pygame.display.update()
     elif x > MAX_X:
         x = MAX_X        
+	screen.blit(label, (500, 500))
+    	pygame.display.update()
     position = (x, y)
     # RENDERING
     # .. rotate the car image for direction
@@ -89,6 +101,10 @@ while play:
     screen.blit(rotated, rect)
     pygame.display.flip()
     for event in pygame.event.get():
+	if event.type == KEYDOWN:
+	    if event.key == K_r:
+		position = (500, 500)
+		speed = direction = 0
         if event.type==QUIT:
             play = False
             ser.close()
